@@ -1,7 +1,8 @@
 ﻿using CleanArchAdvertisementApi.Core.Entities;
 using Microsoft.AspNetCore.Http;
 
-namespace WebAdvertisementApi.Models
+
+namespace CleanArchAdvertisementApi.Core.Entities
 {
     public class AddAdvertisement
     {

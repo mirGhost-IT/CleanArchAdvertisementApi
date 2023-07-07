@@ -9,21 +9,22 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CleanArchAdvertisementApi.Api.Middleware
 {
-    public class ResizeImageMiddleware : IMiddleware
+  public class ResizeImageMiddleware : IMiddleware
     {
         #region ===[ Private Members ]=============================================================
-        private readonly IImage _image;
+        private readonly IImageRepository _image;
         private readonly IAdvertisementRepository _advertisementRepository;
         private readonly IWebHostEnvironment _environment;
 
         #endregion
 
         #region ===[ Constructor ]=================================================================
-        public ResizeImageMiddleware(IImage image, IWebHostEnvironment environment, IAdvertisementRepository advertisementRepository)
+        public ResizeImageMiddleware(IImageRepository image, IWebHostEnvironment environment, IAdvertisementRepository advertisementRepository)
         {
-            _environment = environment;
-            _image = image;
-            _advertisementRepository = advertisementRepository;
+
+            this._image = image;
+            this._advertisementRepository = advertisementRepository;
+            this._environment = environment;
         }
 #endregion
 

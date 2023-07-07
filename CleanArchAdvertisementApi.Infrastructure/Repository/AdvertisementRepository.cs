@@ -4,7 +4,7 @@ using CleanArchAdvertisementApi.Sql.Context;
 using CleanArchAdvertisementApi.Sql.Queries;
 using Microsoft.EntityFrameworkCore;
 using System;
-using WebAdvertisementApi.Models;
+
 
 namespace CleanArchAdvertisementApi.Infrastructure.Repository
 {

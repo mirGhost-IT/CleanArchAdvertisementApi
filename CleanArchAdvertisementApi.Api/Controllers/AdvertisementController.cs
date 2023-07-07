@@ -5,7 +5,7 @@ using CleanArchAdvertisementApi.Infrastructure.Repository;
 using CleanArchAdvertisementApi.Logging;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
-using WebAdvertisementApi.Models;
+
 
 namespace CleanArchAdvertisementApi.Api.Controllers
 {
@@ -14,18 +14,20 @@ namespace CleanArchAdvertisementApi.Api.Controllers
         #region ===[ Private Members ]=============================================================
 
         private readonly IAdvertisementRepository _advertisementRepository;
+        private readonly IImageRepository _image;
         private readonly IWebHostEnvironment _environment;
-        private readonly IImage _image;
+        
 
         #endregion
 
         #region ===[ Constructor ]=================================================================
 
-        public AdvertisementController(IAdvertisementRepository advertisementRepository, IWebHostEnvironment environment, IImage image)
+        public AdvertisementController(IAdvertisementRepository advertisementRepository, IImageRepository image, IWebHostEnvironment environment)
         {
             this._advertisementRepository = advertisementRepository;
-            this._environment = environment;
             this._image = image;
+            this._environment = environment;
+            
         }
 
         #endregion
@@ -64,7 +66,7 @@ namespace CleanArchAdvertisementApi.Api.Controllers
             return apiResponse;
         }
 
-        /// <summary>
+       /// <summary>
         /// Получить список объявлений мультисортировкой 
         /// </summary>
         /// <param name="search">Строка поиска</param>
@@ -234,7 +236,7 @@ namespace CleanArchAdvertisementApi.Api.Controllers
                 apiResponse.Success = true;
                 apiResponse.Result = data;
             }
-            catch (SqlException ex)
+            catch (SqlException ex) 
             {
                 apiResponse.Success = false;
                 apiResponse.Message = ex.Message;

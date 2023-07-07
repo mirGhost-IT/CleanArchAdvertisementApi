@@ -1,5 +1,4 @@
 ﻿using CleanArchAdvertisementApi.Core.Entities;
-using WebAdvertisementApi.Models;
 
 namespace CleanArchAdvertisementApi.Application.Interfaces
 {

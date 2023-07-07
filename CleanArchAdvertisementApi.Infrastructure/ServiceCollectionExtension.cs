@@ -9,6 +9,7 @@ namespace CleanArchAdvertisementApi.Infrastructure
         public static void RegisterServices(this IServiceCollection services)
         {
             services.AddTransient<IAdvertisementRepository, AdvertisementRepository>();
+            services.AddTransient<IImageRepository, ImageRepository>();
         }
     }
 }

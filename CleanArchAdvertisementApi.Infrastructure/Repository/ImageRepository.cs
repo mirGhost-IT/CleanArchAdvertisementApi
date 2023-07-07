@@ -7,11 +7,11 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using WebAdvertisementApi.Models;
+
 
 namespace CleanArchAdvertisementApi.Infrastructure.Repository
 {
-    public class ImageRepository : IImage
+    public class ImageRepository : IImageRepository
     {
         #region ===[ Private Members ]=============================================================
 

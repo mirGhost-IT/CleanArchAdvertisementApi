@@ -1,14 +1,8 @@
 ﻿using CleanArchAdvertisementApi.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebAdvertisementApi.Models;
 
 namespace CleanArchAdvertisementApi.Application.Interfaces
 {
-    public interface IImage
+    public interface IImageRepository
     {
         Task<string> DeleteImgAsync(Guid id, string webRootPath);
         Task<string> EditImgAsync(EditAdvertisement entity, string webRootPath);
